@@ -1,0 +1,36 @@
+<design:component>
+	<design:attribute name="strObjectName" label="Object Name"/>
+    <design:attribute name="strFieldSetName" label="Field Set Name"/>
+    <design:attribute name="soqlWhere" label="SOQL Where Clause" default="WHERE "
+    				  description="Use :recordId to refer to this record's Id e.g. 'where parentRecord = :recordId'."/>
+    <design:attribute name="soqlSort" label="SOQL Order By Clause" default="ORDER BY "
+    				  description="Format: ORDER BY [field] [ASC|DESC] [NULLS FIRST|LAST]"/>
+    <design:attribute name="soqlLimit" label="SOQL Limit Clause" default="LIMIT  "
+    				  description="Format: LIMIT [number]"/>
+    <design:attribute name="title" label="Title"/>
+    <design:attribute name="icon" label="Icon"
+                      						datasource=",account,address,announcement,answer_best,answer_private,answer_public,approval,apps_admin,
+                                                           apps,article,asset_relationship,assigned_resource,avatar_loading,avatar,bot,business_hours,
+                                                           calibration,call_history,call,campaign_members,campaign,canvas,carousel,case_change_status,
+                                                           case_comment,case_email,case_log_a_call,case_milestone,case_transcript,case,client,cms,coaching,
+                                                           connected_apps,contact_list,contact,contract_line_item,contract,custom_notification,custom,
+                                                           dashboard,datadotcom,default,document,drafts,email_chatter,email,empty,endorsement,
+                                                           entitlement_process,entitlement_template,entitlement,entity_milestone,entity,environment_hub,
+                                                           event,feed,feedback,file,flow,folder,forecasts,generic_loading,goals,group_loading,groups,
+                                                           hierarchy,home,household,insights,investment_account,lead_insights,lead_list,lead,link,
+                                                           list_email,live_chat,location,log_a_call,macros,maintenance_asset,maintenance_plan,
+                                                           marketing_actions,merge,metrics,news,note,omni_supervisor,operating_hours,opportunity_splits,
+                                                           opportunity,orders,people,performance,person_account,photo,poll,portal,post,pricebook,process,
+                                                           product_consumed,product_item_transaction,product_item,product_request_line_item,product_request,
+                                                           product_required,product_transfer,product,question_best,question_feed,quick_text,quip_sheet,quip,
+                                                           quotes,recent,record,related_list,relationship,report,resource_absence,resource_capacity,
+                                                           resource_preference,resource_skill,reward,rtc_presence,sales_path,scan_card,service_appointment,
+                                                           service_contract,service_crew_member,service_crew,service_report,service_resource,
+                                                           service_territory_location,service_territory_member,service_territory,shipment,skill_entity,
+                                                           skill_requirement,skill,social,solution,sossession,task,task2,team_member,template,thanks_loading,
+                                                           thanks,timesheet_entry,timesheet,timeslot,today,topic,topic2,unmatched,user,work_order_item,
+                                                           work_order,work_type"
+                      							default="Icons here: https://www.lightningdesignsystem.com/icons/#custom"
+                      							description="If you want to use one of these icons, please select the blank/first
+                                                             option in the above Icon picklist"/>
+</design:component>
