@@ -40,6 +40,7 @@ public class GenericTableController {
         if(! lstDataColumns.isEmpty()){            
             response.lstDataTableColumns = lstDataColumns;
             String query = 'SELECT Id, ' + String.join(lstFieldsToQuery, ',') + ' FROM ' + strObjectName; //change this
+            //String query = 'SELECT ' + String.join(lstFieldsToQuery, ',') + ' FROM ' + strObjectName; //change this
             System.debug('soqlWHERE: ' + soqlWhere);
             if (!String.isBlank(soqlWhere)) {
             	query += ' ' + soqlWhere;

@@ -8,6 +8,7 @@
     <design:attribute name="soqlLimit" label="SOQL Limit Clause" default="LIMIT  "
     				  description="Format: LIMIT [number]"/>
     <design:attribute name="title" label="Title"/>
+    <design:attribute name="download" label="Allow User to download table"/>
     <design:attribute name="icon" label="Icon"
                       						datasource=",account,address,announcement,answer_best,answer_private,answer_public,approval,apps_admin,
                                                            apps,article,asset_relationship,assigned_resource,avatar_loading,avatar,bot,business_hours,

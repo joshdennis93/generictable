@@ -11,21 +11,34 @@
  	<aura:attribute name="sortedBy" type="String"/>
     <aura:attribute name="sortedDirection" type="String"/>
     <aura:attribute name="defaultSortDirection" type="String"/>
+    <aura:attribute name="download" type="Boolean" default="false"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
-    <lightning:card iconName="{! if(!empty(v.icon),'standard:' + v.icon)}">
+    <lightning:card iconName="{! if(!empty(v.icon),'standard:' + v.icon)}" class=".slds-clearfix">
     	<aura:set attribute="title">
     		<a href="javascript:void(0);"><b>{!v.title}</b></a>
     	</aura:set>
- 		<lightning:datatable data="{! v.mydata }" 
-        	columns="{! v.mycolumns }" 
-        	keyField="Id"
-        	hideCheckboxColumn="true"
-        	sortedBy="{! v.sortedBy }"
-            sortedDirection="{! v.sortedDirection }"
-            defaultSortDirection="{! v.defaultSortDirection }"
-            onsort="{! c.updateColumnSorting }"
-	        />
+    	<div class="slds-m-horizontal_x-small">
+	 		<lightning:datatable data="{! v.mydata }" 
+	        	columns="{! v.mycolumns }" 
+	        	keyField="Id"
+	        	hideCheckboxColumn="true"
+	        	sortedBy="{! v.sortedBy }"
+	            sortedDirection="{! v.sortedDirection }"
+	            defaultSortDirection="{! v.defaultSortDirection }"
+	            onsort="{! c.updateColumnSorting }"
+		        />
+	    </div>
+	    
+	    <br/>
+	    <aura:if isTrue="{!v.download}">
+			<div class="slds-float--right slds-m-right_small">
+	    		<lightning:button label="Download" iconName="utility:download" onclick="{! c.downloadCSV }"/>
+	    	</div>
+	    	<br/>
+	    	<br/>
+		</aura:if>
+
     </lightning:card>
 
 
